@@ -1,0 +1,166 @@
+<!--
+Portfolio Website - Dimas Surya Ramadhani
+Theme: Modern Dark
+Tech: HTML + CSS + JS (no React)
+Instructions:
+1. Save this file as index.html.
+2. Open directly in browser.
+3. Customize project details or contact info as needed.
+-->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dimas Surya Ramadhani | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e1b4b, #0a0a0a);
+      color: #e5e7eb;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    header {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin-left: 1rem;
+      color: #a5b4fc;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    nav a:hover { color: #fff; }
+    h1 { font-size: 1.8rem; font-weight: 600; }
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      padding: 4rem 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 2rem;
+    }
+    .hero-text h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem; }
+    .hero-text p { color: #9ca3af; margin-bottom: 1.5rem; }
+    .btn {
+      background: #4f46e5;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .btn:hover { opacity: 0.9; }
+    section { max-width: 1100px; margin: 0 auto; padding: 3rem 1rem; }
+    h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .project {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid #334155;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s;
+    }
+    .project:hover { transform: scale(1.03); }
+    .skills { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .skill { background: rgba(39, 39, 42, 0.5); padding: 0.5rem 1rem; border-radius: 0.5rem; font-size: 0.85rem; }
+    footer {
+      border-top: 1px solid #334155;
+      padding: 2rem 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+    form { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
+    input, textarea {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 0.4rem;
+      color: #fff;
+      padding: 0.6rem;
+    }
+    button { background: #4f46e5; color: white; border: none; padding: 0.6rem; border-radius: 0.4rem; }
+    button:hover { opacity: 0.9; }
+    @media(max-width: 768px){ .hero{ grid-template-columns: 1fr; text-align:center; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Dimas Surya Ramadhani</h1>
+      <p style="color:#9ca3af;font-size:0.9rem;">Teknik Komputer — Coding & Programmer</p>
+    </div>
+    <nav>
+      <a href="#about">Tentang</a>
+      <a href="#projects">Proyek</a>
+      <a href="#skills">Keahlian</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Hai, saya Dimas 👋</h2>
+      <p>Saya mahasiswa Teknik Komputer yang memiliki ketertarikan besar terhadap dunia pemrograman dan teknologi. Saya senang membangun aplikasi dan solusi yang efisien menggunakan bahasa pemrograman modern.</p>
+      <a href="#projects" class="btn">Lihat Proyek</a>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=60" alt="Laptop Coding" style="width:100%; border-radius:1rem;"/>
+    </div>
+  </section>
+
+  <section id="about">
+    <h3>Tentang Saya</h3>
+    <p>Saya <strong>Dimas Surya Ramadhani</strong>, mahasiswa <em>Teknik Komputer</em> yang memiliki ketertarikan dalam dunia coding, pengembangan web, dan algoritma. Saya selalu bersemangat untuk belajar hal baru dan mengimplementasikannya dalam proyek nyata.</p>
+  </section>
+
+  <section id="projects">
+    <h3>Proyek</h3>
+    <div class="projects">
+      <div class="project">
+        <h4>Sistem Informasi Penjadwalan</h4>
+        <p>Aplikasi untuk mengatur jadwal menggunakan Node.js dan MySQL, dengan fitur CRUD dan autentikasi pengguna.</p>
+      </div>
+      <div class="project">
+        <h4>Website Portofolio</h4>
+        <p>Website pribadi modern bertema gelap yang menampilkan profil, proyek, dan kontak. Dibuat dengan HTML, CSS, dan JavaScript.</p>
+      </div>
+      <div class="project">
+        <h4>Mini Compiler</h4>
+        <p>Proyek pembelajaran dalam membuat parser sederhana untuk bahasa domain-spesifik.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h3>Keahlian</h3>
+    <div class="skills">
+      <div class="skill">JavaScript</div>
+      <div class="skill">HTML & CSS</div>
+      <div class="skill">Python</div>
+      <div class="skill">C</div>
+      <div class="skill">Git</div>
+      <div class="skill">Problem Solving</div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h3>Kontak</h3>
+    <p>Punya proyek atau ingin berdiskusi? Hubungi saya melalui form di bawah ini.</p>
+    <form onsubmit="event.preventDefault(); alert('Terima kasih! Pesan kamu sudah terkirim.');">
+      <input type="text" placeholder="Nama Kamu" required />
+      <textarea rows="3" placeholder="Pesan Kamu" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+    <p style="margin-top:2rem;font-size:0.8rem;color:#6b7280;">© <script>document.write(new Date().getFullYear())</script> Dimas Surya Ramadhani — Dibuat dengan ❤️</p>
+  </footer>
+</body>
+</html>
